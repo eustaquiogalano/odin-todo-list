@@ -1,7 +1,7 @@
 export default class Storage {
     // This method stores the project in local storage
-    storeProject(projectName) {
-        window.localStorage.setItem("project", projectName);
+    storeProject(name, project) {
+        window.localStorage.setItem(name, project);
     }
 
     // This method returns the selected project
