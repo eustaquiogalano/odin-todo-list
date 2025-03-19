@@ -6,6 +6,6 @@ export default class Storage {
 
     // This method returns the selected project
     retreiveProject(projectName) {
-        return window.localStorage.getItem(projectName);
+        return JSON.parse(window.localStorage.getItem(projectName));
     }
 }
