@@ -1,11 +1,9 @@
-export default class Storage {
-    // This method stores the project in local storage
-    storeProject(name, project) {
-        window.localStorage.setItem(name, JSON.stringify(project));
-    }
+import { store } from "./store_project.js";
+import { retrieve } from "./retrieve_projects.js";
 
-    // This method returns the selected project
-    retreiveProject(projectName) {
-        return JSON.parse(window.localStorage.getItem(projectName));
+export function storeProject() {
+    return {
+        ...store,
+        ...retrieve,
     }
 }
