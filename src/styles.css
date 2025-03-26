@@ -58,16 +58,23 @@ header {
             font-size: var(--h2-font-size);
         }
 
-        ul {
-            list-style: none;
+        #project-list {
             width: 95%;
             align-self: end;
-            font-size: var(--h3-font-size);
 
-            li {
+            button {
+                text-align: left;
+                width: 95%;
                 margin: .5rem;
                 cursor: pointer;
-                background-color: rgb(128, 128, 128, .5);
+                border: none;
+                border-radius: 6px;
+                padding: 1rem;
+                font-size: var(--h3-font-size);
+            }
+
+            button:hover {
+                background-color: rgb(204, 204, 204);
             }
         }
     }
@@ -151,6 +158,10 @@ main {
 
             }
 
+        }
+
+        .todo-container:hover {
+            background-color: rgb(202, 202, 202);
         }
     }
 }
