@@ -1,7 +1,9 @@
-import { renderer } from "./render_projects.js";
+import { renderProject } from "./render_projects.js";
+import { renderTodos } from "./render_todos.js";
 
 export function domRenderer() {
     return {
-        ...renderer,
+        ...renderProject,
+        ...renderTodos,
     }
 }
