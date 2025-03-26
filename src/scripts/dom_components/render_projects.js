@@ -1,9 +1,9 @@
 const projectList = document.querySelector("#project-list");
 
-export const renderer = {
+export const renderProject = {
 
     // displays all the project inside local storage
-    renderProjects() {
+    renderProjectsToDom() {
 
         let generateHTML = '';
 
