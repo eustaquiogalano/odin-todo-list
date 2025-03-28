@@ -13,8 +13,12 @@ export const renderProject = {
                 // Parse to object the string from local storage
                 let currentProject = JSON.parse(localStorage.getItem(key));
 
+                // create ID of each button based 
+                // on their project name
+                let idName = currentProject.projectName.split(" ").join("");
+
                 // Concatenate the projects names enclose with li tag 
-                generateHTML += `<button class="projectButton">${currentProject.projectName}</button>`;
+                generateHTML += `<button id="${idName}" class="projectButton">${currentProject.projectName}</button>`;
 
                 // return a key value pair array
                 return [key, localStorage.getItem(key)];
