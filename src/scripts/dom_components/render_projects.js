@@ -14,7 +14,7 @@ export const renderProject = {
                 let currentProject = JSON.parse(localStorage.getItem(key));
 
                 // Concatenate the projects names enclose with li tag 
-                generateHTML += `<button>${currentProject.projectName}</button>`;
+                generateHTML += `<button class="projectButton">${currentProject.projectName}</button>`;
 
                 // return a key value pair array
                 return [key, localStorage.getItem(key)];
