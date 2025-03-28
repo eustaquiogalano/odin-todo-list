@@ -2,5 +2,11 @@ import { renderTodos } from "./render_todos.js";
 
 
 export function initProjectButton() {
-    document.querySelector("#def").addEventListener("click", renderTodos.renderTodosToDom);
+    const projectButtonList = document.querySelectorAll(".projectButton");
+    console.log(projectButtonList); 
+    
+    projectButtonList.forEach((button) => {
+        button.addEventListener("click", renderTodos.renderTodosToDom);
+    });
+
 }
