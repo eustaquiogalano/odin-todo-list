@@ -15,7 +15,7 @@ export const renderProject = {
 
                 // create ID of each button based 
                 // on their project name
-                let idName = currentProject.projectName.split(" ").join("");
+                let idName = currentProject.projectName.split(" ").join("-");
 
                 // Concatenate the projects names enclose with li tag 
                 generateHTML += `<button id="${idName}" class="projectButton">${currentProject.projectName}</button>`;
