@@ -34,6 +34,10 @@ header {
     display: flex;
     flex-direction: column;
 
+    button:hover {
+        background-color: var(--hovered-color);
+    }
+
     h1 {
         font-size: var(--h1-font-size);
         height: 15%;
@@ -46,7 +50,7 @@ header {
     }
 
     &>div {
-        height: 85%;
+        height: auto;
         width: 100%;
         background-color: white;
         padding: 1rem;
@@ -73,12 +77,16 @@ header {
                 padding: 1rem;
                 font-size: var(--h3-font-size);
             }
-
-            button:hover {
-                background-color: var(--hovered-color);
-            }
         }
     }
+
+    #add-project-button {
+        font-size: var(--h3-font-size);
+        height: 10%;
+        border-radius: 6px;
+        border: none;
+    }
+    
 }
 
 main {
