@@ -13,7 +13,8 @@ export const renderTodos = {
 
         // get the todo list of the selected project 
         // based on the clicked button
-        const todoList = JSON.parse(localStorage.getItem(projectKey)).todoList;
+        const project = JSON.parse(localStorage.getItem(projectKey));
+        const todoList = project.todoList;
 
         // loop through the todo list 
         // concatenate all generated html for each todo
