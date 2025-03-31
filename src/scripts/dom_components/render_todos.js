@@ -1,3 +1,5 @@
+import { renderProjectName } from "./render_project_name";
+
 const todoListContainer = document.querySelector("#todo-list-container");
 
 export const renderTodos = {
@@ -15,6 +17,11 @@ export const renderTodos = {
         // based on the clicked button
         const project = JSON.parse(localStorage.getItem(projectKey));
         const todoList = project.todoList;
+
+        // invoke render project name function to 
+        // simultaneously render proejct name
+        // with the todos
+        renderProjectName(id, projectKey);
 
         // loop through the todo list 
         // concatenate all generated html for each todo
