@@ -1,4 +1,3 @@
-// import { createProjectModal } from "./scripts/project_components/modals.js";
 
 export function initializeModals() {
 
@@ -19,7 +18,7 @@ export function initializeModals() {
 export function initializeProjectCreation() {
 
     document.querySelector("#add-to-list").addEventListener("click", () => {
-        console.log("asdfasdf"); 
+        
         
     });
 
