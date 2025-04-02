@@ -6,6 +6,13 @@
     <title>Todo</title>
 </head>
 <body>
+    <div id="add-project-modal">
+        <button class="close-modal">&times</button>
+        <h3>Project Name:</h3>
+        <input type="text">
+        <br>
+        <button id="add-to-list">Add Project</button>  
+    </div>
     <header>
         <h1>TQSK</h1>
         <div>
@@ -13,7 +20,7 @@
             <div id="project-list">
             </div>
         </div>
-        <button id="add-project-button">Add project</button>
+        <button id="add-project-button" class="open-modal">Add new project</button>
     </header>
     <main>
         <section id="project-details-container">
