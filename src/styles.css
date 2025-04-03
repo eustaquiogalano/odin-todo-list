@@ -150,13 +150,33 @@ main {
 
     #project-details-container {
         height: 15%;
-
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
 
-        h3 {
-            font-size: var(--h3-font-size);
+        #left-side {
+            margin-right: 1rem;
+
+            h3 {
+                font-size: var(--h3-font-size);
+            }
+        }
+
+        #right-side {
+            height: 100%;
+            width: 20%;
+            display: flex;
+            align-items: center;
+
+            .open-add-todo-modal {
+                height: 100%;
+                width: 100%;
+                border: none;
+                border-radius: 6px;
+                font-size: var(--h3-font-size);
+            }
+            .open-add-todo-modal:hover {
+                background-color: var(--hovered-color);
+            }
         }
     }
 
@@ -217,7 +237,7 @@ main {
         }
 
         .todo-container:hover {
-            background-color: rgb(202, 202, 202);
+            background-color: var(--hovered-color);
         }
     }
 }
