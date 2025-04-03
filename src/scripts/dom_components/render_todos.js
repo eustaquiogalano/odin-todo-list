@@ -7,9 +7,9 @@ export const renderTodos = {
 
         // get the clicked button
         // arrange to be used as key 
-        // local storage
+        //  for local storage
         const projectKey = id.split("-").join(" ");
-
+        
         // initialize empty array 
         let generateHTML = '';
 
