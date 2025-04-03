@@ -11,11 +11,11 @@ export const renderProject = {
             Object.keys(localStorage).map((key) => {
 
                 // Parse to object the string from local storage
-                let currentProject = JSON.parse(localStorage.getItem(key));
+                const currentProject = JSON.parse(localStorage.getItem(key));
 
                 // create ID of each button based 
                 // on their project name
-                let idName = currentProject.projectName.split(" ").join("-");
+                const idName = currentProject.projectName.split(" ").join("-");
 
                 // Concatenate the projects names enclose with li tag 
                 generateHTML += `<button id="${idName}" class="projectButton">${currentProject.projectName}</button>`;
