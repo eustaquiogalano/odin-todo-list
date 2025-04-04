@@ -26,10 +26,13 @@ body {
     grid-template-columns: 20% 80%;
 }
 
+.modal {
+    position: absolute;
+}
+
 #add-project-modal {
     display: none;
     flex-direction: column;
-    position: absolute;
     top: 20vh;
     left: 30vw;
     background-color: rgb(43, 255, 0);
@@ -70,6 +73,41 @@ body {
         height: 70px;
     }
 
+}
+
+#todo-creation-modal {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37, 37, 37);
+    top: 20vh;
+    left: 30vw;
+    height: auto;
+    width: 30%;
+    padding: 1rem;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: var(--h3-font-size);
+
+    div {
+        width: 100%;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        font-size: var(--h3-font-size);
+    }
+
+    button {
+        height: 80px;
+        font-size: var(--h3-font-size);
+        background-color: green;
+        border: none;
+        border-radius: 6px;
+        color: white;
+    }
 }
 
 header {
