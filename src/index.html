@@ -6,12 +6,39 @@
     <title>Todo</title>
 </head>
 <body>
-    <div id="add-project-modal">
+    <div id="add-project-modal" class="modal">
         <button class="close-modal">&times</button>
         <h3>Project Name:</h3>
         <input type="text" id="project-name-input">
         <br>
         <button id="add-to-list">Add Project</button>  
+    </div>
+    <div id="todo-creation-modal" class="modal">
+        <div>
+            <label for="project-tile">Title</label>
+            <br>
+            <input type="text" id="project-title">
+        </div>
+        <div>
+            <label for="project-description">Description</label>
+            <br>
+            <textarea id="project-description"></textarea>
+        </div>
+        <div>
+            <label for="project-due">Due date</label>
+            <br>
+            <input type="date" id="project-due">
+        </div>
+        <div>
+            <label for="project-priority">Priority (1 highest)</label>
+            <br>
+            <input type="number" name="" id="project-priority">
+        </div>
+        <div>
+            <label for="project-completion">Completed</label>
+            <br>
+            <input type="checkbox">
+        </div>
     </div>
     <header>
         <h1>TQSK</h1>
