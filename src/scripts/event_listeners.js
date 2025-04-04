@@ -10,6 +10,8 @@ const projectName = document.querySelector("#project-name-input");
 // get a reference of the modal
 const addProjectModal = document.querySelector("#add-project-modal");
 
+// event listeners for opening and closing
+// of project creation modal
 export function initializeModals() {
 
     // modal for adding project will apear
@@ -25,6 +27,7 @@ export function initializeModals() {
 
 }
 
+// event listener for project creation
 export function initializeProjectCreation() {
 
     document.querySelector("#add-to-list").addEventListener("click", () => {
