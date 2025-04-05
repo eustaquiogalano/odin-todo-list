@@ -98,6 +98,7 @@ body {
 
     input {
         font-size: var(--h3-font-size);
+        padding: .5rem;
     }
 
     button {
