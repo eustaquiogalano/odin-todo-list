@@ -7,7 +7,7 @@ import { domRenderer } from "./dom_components/dom_manager";
 // initializeProjectCreation()
 const projectName = document.querySelector("#project-name-input");
 
-// get a reference of the modal
+// get a reference of the project creation modal
 const addProjectModal = document.querySelector("#add-project-modal");
 
 // event listeners for opening and closing
@@ -60,5 +60,9 @@ export function initializeProjectCreation() {
         projectName.value = ""; 
 
     });
+
+}
+
+export function initializeTodoCreation() {
 
 }
