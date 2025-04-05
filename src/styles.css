@@ -108,6 +108,13 @@ body {
         border-radius: 6px;
         color: white;
     }
+
+    .close-todo-modal {
+        align-self: flex-end;
+        width: 10%;
+        height: 10%;
+    }
+
 }
 
 header {
