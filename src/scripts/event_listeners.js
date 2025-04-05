@@ -42,7 +42,7 @@ export function initializeProjectCreation() {
         const storage = projectStorageAccess();
 
         // store the newly created project
-        storage.storeProject(newProject.projectName, newProject); 
+        storage.storeProject(newProject.projectName, newProject);
 
         // create new renderer object for 
         // rendering purposes
@@ -57,12 +57,27 @@ export function initializeProjectCreation() {
         // exit the modal after click event
         // reset the value of the input
         addProjectModal.style.display = "none";
-        projectName.value = ""; 
+        projectName.value = "";
 
     });
 
 }
 
+// event listeners for todo creation
 export function initializeTodoCreation() {
 
+    // references to the element from the DOM
+    const openTodoCreationModal = document.querySelector("#open-todo-creation-modal");
+    const todoCreationModal = document.querySelector("#todo-creation-modal");
+    const closeTodoCreationModal = document.querySelector(".close-todo-modal");
+
+    // This opens the todo creation modal
+    openTodoCreationModal.addEventListener("click", () => {
+        todoCreationModal.style.display = "flex";
+    });
+
+    // this closes the todo creation modal
+    closeTodoCreationModal.addEventListener("click", () => {
+        todoCreationModal.style.display = "none";
+    });
 }
