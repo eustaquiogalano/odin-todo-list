@@ -88,13 +88,21 @@ export function initializeTodoCreationModal() {
 
 export function initializeTodoCreation() {
 
+    // event listener for add todo creation button
     document.querySelector("#add-todo-button").addEventListener("click", () => {
+
+        // Get a reference of all the input form from the 
+        // todo creation modal 
         const projectTitle = document.querySelector("#project-title");
         const projectDescription = document.querySelector("#project-description");
         const projectDue = document.querySelector("#project-due");
         const projectPriority = document.querySelector("#project-priority");
+
+        // Also get a reference of the selected project
         const projectName = document.querySelector("#left-side > h3");
 
+        // Create new instance of Todo
+        // with the values of all the inputs as the argument
         const todo = new Todo(
             projectTitle.value,
             projectDescription.value,
@@ -102,30 +110,29 @@ export function initializeTodoCreation() {
             projectPriority.value
         );
 
+        // Retrieve the selectec project using the 
+        // text content of the selected project
         const selectedProject = storage.retreiveProject(projectName.textContent);
+
+        // Push in the todo list array the newly created todo 
+        // in the project you retrieve
         selectedProject.todoList.push(todo);
-        console.log(selectedProject);
 
+        // Store back to the Local Storage the project you retrieve
+        // since the work is done
         storage.storeProject(projectName.textContent, selectedProject);
-
-        console.log(projectName.id.split("-").join(" "));
         
+        // last thing to do is to render the updated todolist 
+        // of the selected project to the DOM
         renderTodos.renderTodosToDom(projectName.textContent);
-        // initProjectButton();
 
-        
-
-
-
-
-
-
+        // reset all the input to blank
         projectTitle.value = "";
         projectDescription.value = "";
         projectDue.value = "";
         projectPriority.value = "";
 
+        // and make the modal disappear
         todoCreationModal.style.display = "none";
-
     });
 }
