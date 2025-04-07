@@ -3,7 +3,6 @@ import { createProject } from "./project_components/project_manager";
 import { domRenderer } from "./dom_components/dom_manager";
 import Todo from "./todo_components/todo_manager";
 import { renderTodos } from "./dom_components/render_todos";
-import { initProjectButton } from "./dom_components/init_button";
 
 // Will be used for both initializer functions
 // initialiazeModals()
