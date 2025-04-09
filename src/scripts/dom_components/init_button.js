@@ -7,7 +7,7 @@ export function initProjectButton() {
 
     // Loop through the list of project button
     projectButtonList.forEach((button) => {
-        
+
         // put an event listener
         button.addEventListener("click", () => {
 
@@ -16,15 +16,26 @@ export function initProjectButton() {
 
             // get a reference of edit todo button
             // for opening the edit modal
-            const editButton = document.querySelector("#edit-todo-button");
+            const editButton = document.querySelectorAll(".edit-todo-button");
             const todoEditModal = document.querySelector("#expand-todo");
 
-            // put an event listener to the edit button
-            editButton.addEventListener("click", () => {
+            // loop through each button
+            editButton.forEach((button) => {
 
-                // change the display property to display to appear
-                todoEditModal.style.display = "flex";
+                // put an event listener to open the modal
+                button.addEventListener("click", () => {
 
+                    // change the display property to display to appear
+                    todoEditModal.style.display = "flex";
+
+                    // get a reference of the exit button on edit todo
+                    const exitTodo = document.querySelector("#exit-edit-todo");
+
+                    // add event listener for exiting edit modal
+                    exitTodo.addEventListener("click", () => {
+                        todoEditModal.style.display = "none";
+                    });
+                });
             });
         })
     });
