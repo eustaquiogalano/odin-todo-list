@@ -284,7 +284,7 @@ main {
 
             }
 
-            #edit-todo {
+            #edit-todo-button {
                 width: 20%;
                 background-color: var(--github-green);
                 border: none;
@@ -309,7 +309,7 @@ main {
         background-color: rgb(221, 221, 221);
         padding: 1rem;
         border-radius: 6px;
-        display: flex;
+        display: none;
         flex-direction: column;
 
         & > * {
