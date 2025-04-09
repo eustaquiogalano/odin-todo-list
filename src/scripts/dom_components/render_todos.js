@@ -26,8 +26,11 @@ export const renderTodos = {
         // loop through the todo list 
         // concatenate all generated html for each todo
         todoList.forEach(todo => {
+
+            const todoTitle = todo.title.split(" ").join("-");
+
             generateHTML += `
-                <div class="todo-container">
+                <div class="todo-container" id="${todoTitle}">
                     <div class="container-left-side">
                         <p class="todo-priority">${todo.priority}</p>
                         <button class="checkbox"></button>
