@@ -284,7 +284,7 @@ main {
 
             }
 
-            #edit-todo-button {
+            .edit-todo-button {
                 width: 20%;
                 background-color: var(--github-green);
                 border: none;
@@ -306,7 +306,7 @@ main {
         position: absolute;
         top: 20%;
         left: 40%;
-        background-color: rgb(221, 221, 221);
+        background-color: var(--github-black);
         padding: 1rem;
         border-radius: 6px;
         display: none;
@@ -314,6 +314,16 @@ main {
 
         & > * {
             margin-bottom: .5rem;
+            color: white;
+        }
+
+        #exit-edit-todo {
+            align-self: flex-end;
+            height: 30px;
+            width: 30px;
+            background-color: var(--github-green);
+            border: none;
+            border-radius: 6px;
         }
 
         #checklist {
@@ -321,7 +331,6 @@ main {
             width: 10%;
             border: none;
             border-radius: 6px;
-            align-self: flex-end;
         }
     }
 }
