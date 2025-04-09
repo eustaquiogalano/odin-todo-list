@@ -23,7 +23,7 @@ export function initProjectButton() {
             editButton.forEach((button) => {
 
                 // put an event listener to open the modal
-                button.addEventListener("click", () => {
+                button.addEventListener("click", (event) => {
 
                     // change the display property to display to appear
                     todoEditModal.style.display = "flex";
@@ -35,6 +35,19 @@ export function initProjectButton() {
                     exitTodo.addEventListener("click", () => {
                         todoEditModal.style.display = "none";
                     });
+
+                    const selectedTodo = event.target.parentElement.id;
+
+                    const todoPriority = document.querySelector(`#${selectedTodo} .todo-priority`);
+                    const todoTitle = document.querySelector(`#${selectedTodo} .todo-title`);
+                    const todoDue = document.querySelector(`#${selectedTodo} .todo-due-date`);
+                    const todoDescription = document.querySelector(`#${selectedTodo} .todo-description`);
+                  
+                    document.querySelector("#expand-todo #priority").textContent = todoPriority.textContent;
+                    document.querySelector("#expand-todo #title").textContent = todoTitle.textContent;
+                    document.querySelector("#expand-todo #date").textContent = todoDue.textContent;
+                    document.querySelector("#expand-todo #description").textContent = todoDescription.textContent;
+
                 });
             });
         })
