@@ -39,7 +39,7 @@ export const renderTodos = {
                             ${todo.description}
                         </p>
                     </div>
-                    <button id="edit-todo">Edit</button>
+                    <button class="edit-todo-button">Edit</button>
                 </div>
             `;
         });
