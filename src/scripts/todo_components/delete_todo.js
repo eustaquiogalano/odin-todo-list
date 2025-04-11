@@ -10,10 +10,17 @@ export function initialieDeleteTodoButton() {
     // attach click event 
     todoListContainer.addEventListener("click", (event) => {
 
+        // check the clicked element first 
+        // make sure to do nothing if the user accidentaly
+        // clicked the todolist container
+        if (event.target.id === "todo-list-container") {
+            return;
+        }
+        
         // get the selected todo and its project using 
         // the id of the target and the id of the seledted parent 
         const todoTitle = event.target.id.split("--")[1].split("-").join(" ");
-        const projectName = event.target.parentElement.id.split("--")[0].split("_").join(" ");
+        const projectName = event.target.parentElement.id.split("--")[0].split("_").join(" ");        
         
         // retrieve the selected project from local storage
         // using the extracted parent ID 
