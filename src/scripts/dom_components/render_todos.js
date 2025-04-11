@@ -1,9 +1,11 @@
+import { initialieDeleteTodoButton } from "../todo_components/delete_todo";
 import { renderProjectName } from "./render_project_name";
 
-const todoListContainer = document.querySelector("#todo-list-container");
 
 export const renderTodos = {
     renderTodosToDom(id) {
+
+        const todoListContainer = document.querySelector("#todo-list-container");
 
         // get the clicked button
         // arrange to be used as key 
@@ -28,9 +30,10 @@ export const renderTodos = {
         todoList.forEach(todo => {
 
             const todoTitle = todo.title.split(" ").join("-");
+            const selectedProjectName = project.projectName.split(" ").join("_") 
 
             generateHTML += `
-                <div class="todo-container" id="${todoTitle}">
+                <div class="todo-container" id="${selectedProjectName}--${todoTitle}">
                     <div class="container-left-side">
                         <p class="todo-priority">${todo.priority}</p>
                         <button class="checkbox"></button>
@@ -43,6 +46,7 @@ export const renderTodos = {
                         </p>
                     </div>
                     <button class="edit-todo-button">Edit</button>
+                    <button class="delete-todo-button" id="delete--${todoTitle}">Delete</button>
                 </div>
             `;
         });
