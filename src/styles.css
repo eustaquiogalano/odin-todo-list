@@ -269,7 +269,7 @@ main {
 
             .container-right-side {
                 height: 100%;
-                width: 60%;
+                width: 40%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -286,7 +286,8 @@ main {
 
             }
 
-            .edit-todo-button {
+            .edit-todo-button,
+            .delete-todo-button {
                 width: 20%;
                 background-color: var(--github-green);
                 border: none;
@@ -295,6 +296,10 @@ main {
                 font-size: var(--h3-font-size);
             }
 
+            .delete-todo-button {
+                background-color: red;
+                margin-left: .3rem;
+            }
         }
 
         .todo-container:hover {
